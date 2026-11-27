@@ -1,0 +1,171 @@
+{
+  "ae_grid": [
+    {
+      "latent_dim": 32,
+      "lr": 0.001,
+      "val_total": 70.8522,
+      "val_recon": 70.8522,
+      "val_kl": 0.0
+    },
+    {
+      "latent_dim": 16,
+      "lr": 0.001,
+      "val_total": 76.2173,
+      "val_recon": 76.2173,
+      "val_kl": 0.0
+    },
+    {
+      "latent_dim": 32,
+      "lr": 0.0003,
+      "val_total": 83.4855,
+      "val_recon": 83.4855,
+      "val_kl": 0.0
+    },
+    {
+      "latent_dim": 16,
+      "lr": 0.0003,
+      "val_total": 86.121,
+      "val_recon": 86.121,
+      "val_kl": 0.0
+    },
+    {
+      "latent_dim": 8,
+      "lr": 0.001,
+      "val_total": 91.378,
+      "val_recon": 91.378,
+      "val_kl": 0.0
+    },
+    {
+      "latent_dim": 8,
+      "lr": 0.0003,
+      "val_total": 99.3423,
+      "val_recon": 99.3423,
+      "val_kl": 0.0
+    }
+  ],
+  "vae_grid": [
+    {
+      "latent_dim": 16,
+      "lr": 0.001,
+      "val_total": 109.449,
+      "val_recon": 90.695,
+      "val_kl": 18.754
+    },
+    {
+      "latent_dim": 32,
+      "lr": 0.001,
+      "val_total": 110.9173,
+      "val_recon": 93.4077,
+      "val_kl": 17.5096
+    },
+    {
+      "latent_dim": 8,
+      "lr": 0.001,
+      "val_total": 113.1418,
+      "val_recon": 97.5514,
+      "val_kl": 15.5905
+    },
+    {
+      "latent_dim": 16,
+      "lr": 0.0003,
+      "val_total": 117.4794,
+      "val_recon": 98.0852,
+      "val_kl": 19.3942
+    },
+    {
+      "latent_dim": 8,
+      "lr": 0.0003,
+      "val_total": 120.5552,
+      "val_recon": 105.8881,
+      "val_kl": 14.6672
+    },
+    {
+      "latent_dim": 32,
+      "lr": 0.0003,
+      "val_total": 121.1749,
+      "val_recon": 101.9166,
+      "val_kl": 19.2583
+    }
+  ],
+  "ae_config": {
+    "latent_dim": 32,
+    "lr": 0.001,
+    "epochs": 30,
+    "batch_size": 128,
+    "optimizer": "Adam",
+    "best_epoch": 27
+  },
+  "vae_config": {
+    "latent_dim": 16,
+    "lr": 0.001,
+    "epochs": 30,
+    "batch_size": 128,
+    "optimizer": "Adam",
+    "beta": 1.0,
+    "best_epoch": 29
+  },
+  "p1_test_metrics": {
+    "AE": {
+      "recon_BCE": 58.72759158325195,
+      "KL": 0.0,
+      "total_loss": 58.72759158325195,
+      "MSE_per_pixel": 0.004654677298604226
+    },
+    "VAE": {
+      "recon_BCE": 78.86125627441406,
+      "KL": 20.485156622314452,
+      "total_loss": 99.34641296386718,
+      "MSE_per_pixel": 0.01281857372400712
+    }
+  },
+  "p1_vae_active_dims": 12,
+  "gan_config": {
+    "img_size": 64,
+    "nz": 100,
+    "ngf": 64,
+    "ndf": 64,
+    "lr": 0.0002,
+    "beta1": 0.5,
+    "beta2": 0.999,
+    "batch_size": 64,
+    "epochs": 200,
+    "real_label": 0.9,
+    "n_train_images": 2872,
+    "training_minutes": 12.2
+  },
+  "p2_pixel_stats": {
+    "real_mean": {
+      "R": 0.5800999999046326,
+      "G": 0.5241000056266785,
+      "B": 0.4733999967575073
+    },
+    "generated_mean": {
+      "R": 0.5993000268936157,
+      "G": 0.5393000245094299,
+      "B": 0.499099999666214
+    },
+    "real_std": {
+      "R": 0.2872999906539917,
+      "G": 0.272599995136261,
+      "B": 0.2752000093460083
+    },
+    "generated_std": {
+      "R": 0.32420000433921814,
+      "G": 0.30959999561309814,
+      "B": 0.31310001015663147
+    }
+  },
+  "p2_fid": {
+    "generated": 81.58781184744322,
+    "real_vs_real_baseline": 41.88757731882845,
+    "noise": 314.5231135354582
+  },
+  "device": "Tesla T4",
+  "gan_final_epoch": {
+    "loss_D": 0.4942,
+    "loss_G": 3.9015,
+    "D_x": 0.8322,
+    "D_G_z1": 0.0717,
+    "D_G_z2": 0.0463
+  }
+}
